@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20150601194154) do
 
   create_table "datapoints", force: :cascade do |t|
-    t.date     "date"
+    t.datetime "date"
     t.string   "sensor"
     t.string   "value"
     t.datetime "created_at", null: false
