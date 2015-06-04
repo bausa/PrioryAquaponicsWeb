@@ -38,7 +38,14 @@ The database is an sqlite3 database in dev (essentially just a file)
 In production it runs a database called postgresql which is far more complicated and takes some time to setup on your local machine.  It will automatically switch.  Feel free to research postgres more and try to get it running.
 
 ## Changing routes
-All the routes are defined in config/routes.rb.  You can change the URLs you use to request different actions in there.  You also can embed parameters in the urls by writing ":paramname" in the URL.  For example, to have the sensor name in the URL you could replace `get 'log', to: "data_input#logData"` with `get 'log/:sensor', to: "data_input#logData"`.
+All the routes are defined in config/routes.rb.  You can change the URLs you use to request different actions in there.  You also can embed parameters in the urls by writing ":paramname" in the URL.  For example, to have the sensor name in the URL you could replace
+```
+get 'log', to: "data_input#logData"
+```
+with
+```
+get 'log/:sensor', to: "data_input#logData"
+```
 
 ## Dependancies
 You can view all the dependancies in a file called Gemfile.
