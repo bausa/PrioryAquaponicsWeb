@@ -1,5 +1,6 @@
 == Download
-run `git clone https://github.com/samuelb2/PrioryAquaponicsWeb.git && cd PrioryAquapoinicsWeb`
+run
+        git clone https://github.com/samuelb2/PrioryAquaponicsWeb.git && cd PrioryAquapoinicsWeb
 
 == Data Access
 Visit the homepage of the application and a CSV will be downloaded
@@ -7,18 +8,19 @@ To log data make a GET request to /log with a parameter called sensor and one na
 
 == Example API request
 Type this into terminal to test the API
-curl http://localhost:3000/log?sensor=temp1&value=23
+        curl http://localhost:3000/log?sensor=temp1&value=23
 
 == Code structure
--app
-  -controllers
-    -data_input_controllers.rb (handles data logging and API requests)
-    -home_controller.rb (handles home csv rendering)
-  -models
-    -datapoint.rb (is the class that represents a datapoint and has methods for CSV generation)
+  -app
+    -controllers
+      -data_input_controllers.rb (handles data logging and API requests)
+      -home_controller.rb (handles home csv rendering)
+    -models
+      -datapoint.rb (is the class that represents a datapoint and has methods for CSV generation)
     
 == Installing Ruby and Rails
-You can do it all in one line by just running: `curl -sSL https://get.rvm.io | bash -s stable --rails`
+You can do it all in one line by just running:
+        curl -sSL https://get.rvm.io | bash -s stable --rails
     
 == Querying data
 To query data in a controller, you can run queries on the data point class
