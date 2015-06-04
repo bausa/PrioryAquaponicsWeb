@@ -12,13 +12,14 @@ curl http://localhost:3000/log?sensor=temp1&value=23
 ```
 
 ## Code structure
+```
   -app
     -controllers
       -data_input_controllers.rb (handles data logging and API requests)
       -home_controller.rb (handles home csv rendering)
     -models
       -datapoint.rb (is the class that represents a datapoint and has methods for CSV generation)
-    
+``` 
 ## Installing Ruby and Rails
 You can do it all in one line by just running:
 ```
@@ -27,7 +28,7 @@ curl -sSL https://get.rvm.io | bash -s stable --rails
     
 ## Querying data
 To query data in a controller, you can run queries on the data point class
-Some examples are `ruby Datapoint.all`
+Some examples are `Datapoint.all`
 will return an array of datapoints
 `Datapoint.where(:sensor => "temp1")` will return the datapoints that have a sensor with the name "temp1"
 Google "ActiveRecord query rails" for more information on different queries
