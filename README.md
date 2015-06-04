@@ -24,7 +24,11 @@ You can do it all in one line by just running:
     
 == Querying data
 To query data in a controller, you can run queries on the data point class
-Some examples are `Datapoint.all` will return an array of datapoints
+Some examples are
+``` ruby
+Datapoint.all
+```
+will return an array of datapoints
 `Datapoint.where(:sensor => "temp1")` will return the datapoints that have a sensor with the name "temp1"
 Google "ActiveRecord query rails" for more information on different queries
 
